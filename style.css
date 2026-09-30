@@ -143,4 +143,44 @@ body {margin: 0;
   line-height: 1.8;
   color: #555555;  }
 
+.location {
+  padding: 60px 25px;
+  text-align: center;
+  background-color: white;}
+
+.location-label {
+  margin-bottom: 18px;
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: #4F86A8;}
+
+.location h2 {
+  margin: 0 0 8px;
+  font-size: 24px;
+  color: #222222;}
+
+.location-hall {
+  margin: 0 0 8px;
+  font-size: 16px;
+  color: #444444;}
+
+.location-address {
+  margin: 0 0 30px;
+  font-size: 14px;
+  color: #777777;}
+
+.map-buttons {
+  display: flex;
+  gap: 10px;}
+
+.map-buttons a {
+  flex: 1;
+  padding: 13px 0;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333333;
+  font-size: 14px;
+  background-color: white;}
+
 
