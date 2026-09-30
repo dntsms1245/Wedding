@@ -85,3 +85,7 @@ body {margin: 0;
 .gallery-row img {
   width: calc(50% - 5px);
   height: auto;  }
+
+.gallery img {
+  border-radius: 12px;
+  cursor: pointer; }
