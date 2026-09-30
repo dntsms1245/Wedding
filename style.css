@@ -19,3 +19,7 @@ body {
   height: auto;
   display: block;
 }
+
+.content {
+  padding: 30px 20px;
+}
