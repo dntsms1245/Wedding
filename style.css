@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  background-color: #eeeeee;
+  font-family: Arial, sans-serif;
+}
+
+.invitation {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: white;
+  text-align: center;
+  padding: 30px 20px;
+  box-sizing: border-box;
+}
