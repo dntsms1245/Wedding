@@ -35,7 +35,8 @@ body {margin: 0;
 
 .greeting {
   padding: 60px 30px;
-  text-align: center;  }
+  text-align: center;
+  background-color: #f7fbf5;  }
 
 .greeting h2 {
   margin-bottom: 35px;
@@ -47,3 +48,18 @@ body {margin: 0;
   font-size: 16px;
   line-height: 2;
   color: #444444;  }
+
+.parents {
+  margin-top: 40px;
+  padding-top: 25px;
+  border-top: 1px solid #cccccc;  }
+
+.parents p {
+  margin: 8px 0;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #444444;  }
+
+.parents strong {
+  font-size: 17px;
+  color: #222222;  }
