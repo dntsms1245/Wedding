@@ -63,3 +63,25 @@ body {margin: 0;
 .parents strong {
   font-size: 17px;
   color: #222222;  }
+
+.gallery {
+  padding: 60px 20px;
+  background-color: white;
+  text-align: center;  }
+
+.gallery h2 {
+  margin-bottom: 30px;
+  font-size: 20px;
+  color: #4F86A8;  }
+
+.gallery-main {
+  width: 100%;
+  margin-bottom: 10px;  }
+
+.gallery-row {
+  display: flex;
+  gap: 10px;  }
+
+.gallery-row img {
+  width: calc(50% - 5px);
+  height: auto;  }
