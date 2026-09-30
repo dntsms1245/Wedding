@@ -191,4 +191,11 @@ body {margin: 0;
   margin-right: 4px;
   font-size: 14px; }
 
+.map-buttons .map-logo {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  display: block;}
 
+.map-buttons a {
+  gap: 6px;}
