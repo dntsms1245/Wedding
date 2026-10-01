@@ -104,8 +104,11 @@ body {margin: 0;
   border-radius: 6px;
   cursor: pointer;   }
 
-.gallery-extra {
-  display: none;   }
+.gallery-grid .gallery-extra {
+  display: none; }
+
+.gallery-grid .gallery-extra.show {
+  display: block; }
 
 .gallery-more-button {
   margin-top: 20px;
