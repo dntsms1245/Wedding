@@ -292,7 +292,10 @@ body {margin: 0;
 .copy-button {
   background-color: white;
   color: #333333;
-  border: 1px solid #cccccc;  }
+  border: 1px solid #cccccc; 
+
+ flex-shrink: 0;
+  white-space: nowrap;   }
 
 .account-group {
   margin-bottom: 20px;
