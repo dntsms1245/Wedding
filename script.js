@@ -66,6 +66,11 @@ geocoder.addressSearch(
         position: coords
       });
 
+      const infowindow = new kakao.maps.InfoWindow({
+       content: '<div style="padding:8px 12px;font-size:13px;">리베라 호텔</div>'
+         });
+          infowindow.open(map, marker);
+
       map.setCenter(coords);
     }
   }
