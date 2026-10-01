@@ -117,7 +117,7 @@ body {margin: 0;
   cursor: pointer;  }
 
 .wedding-info {
-  padding: 60px 20px;
+  padding: 50px 20px 35px;
   text-align: center;
   background-color: #f7fbf5;  }
 
@@ -202,7 +202,7 @@ body {margin: 0;
   gap: 6px;}
 
 .attendance {
-  padding: 60px 30px;
+  padding: 35px 30px 60px;
   text-align: center;
   background-color: #f7fbf5;  }
 
