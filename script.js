@@ -32,8 +32,8 @@ copyButtons.forEach(function(button) {
     navigator.clipboard.writeText(accountNumber);
     button.textContent = "복사완료 ✓";
     setTimeout(function() {
-      button.textContent = "계좌번호<br>복사";
-    }, 2000);
+      button.innerHTML = "계좌번호<br>복사";
+    }, 1500);
   });
 });
 
