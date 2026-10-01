@@ -204,7 +204,7 @@ body {margin: 0;
 .attendance {
   padding: 60px 30px;
   text-align: center;
-  background-color: white;  }
+  background-color: #f7fbf5;  }
 
 .attendance-label {
   margin-bottom: 18px;
@@ -231,11 +231,3 @@ body {margin: 0;
   color: white;
   text-decoration: none;
   font-size: 15px;  }
-
-.form-container {
-  margin-top: 30px;
-  width: 100%;  }
-
-.form-container iframe {
-  width: 100%;
-  border: none;  }
