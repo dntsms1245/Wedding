@@ -1,6 +1,13 @@
+@font-face {
+  font-family: "GowunDodumLocal";
+  src: url("fonts/GowunDodum-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;  }
+
 body {margin: 0;
+    margin: 0;
   background-color: #eeeeee;
-  font-family: Arial, sans-serif; }
+  font-family: "GowunDodumLocal", sans-serif;  }
 
 .invitation {
   width: 100%;
