@@ -293,3 +293,47 @@ body {margin: 0;
   background-color: white;
   color: #333333;
   border: 1px solid #cccccc;  }
+
+.account-group {
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden; }
+
+.groom-group {
+  background-color: #eef8f8; }
+
+.bride-group {
+  background-color: #fff3f3; }
+
+.group-title {
+  margin: 0;
+  padding: 20px;
+  font-size: 17px;
+  text-align: left;
+  color: #333333; }
+
+.groom-group .group-title {
+  background-color: #dff1f2; }
+
+.bride-group .group-title {
+  background-color: #fde7e7; }
+
+.account-row {
+  padding: 18px 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+
+  text-align: left; }
+
+.account-row strong {
+  font-size: 16px;
+  color: #333333; }
+
+.account-row p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #666666; }
