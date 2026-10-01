@@ -364,3 +364,23 @@ body {margin: 0;
   margin: 25px 0 20px;
   border-radius: 6px;
   overflow: hidden;}
+
+
+.transport-info {
+  margin-top: 35px;
+  text-align: left;}
+
+.transport-item {
+  padding: 18px 0;
+  border-top: 1px solid #dddddd;}
+
+.transport-item h3 {
+  margin: 0 0 8px;
+  font-size: 15px;
+  color: #333333; }
+
+.transport-item p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #666666; }
