@@ -82,8 +82,9 @@ const galleryMoreButton = document.querySelector(".gallery-more-button");
 const galleryExtraImages = document.querySelectorAll(".gallery-extra");
 
 galleryMoreButton.addEventListener("click", function() {
+
   galleryExtraImages.forEach(function(image) {
-    image.style.display = "block";
+    image.classList.add("show");
   });
 
   galleryMoreButton.style.display = "none";
