@@ -336,26 +336,26 @@ body {margin: 0;
 .account-row p {
   margin: 5px 0 0;
   font-size: 14px;
+  color: #666666;}
 
-  .group-title {
+.group-title {
   cursor: pointer;
   list-style: none;
   position: relative;
-  padding-right: 45px;  }
+  padding-right: 45px;}
 
 .group-title::-webkit-details-marker {
-  display: none;  }
+  display: none;}
 
 .group-title::after {
   content: "⌃";
   position: absolute;
   right: 20px;
   font-size: 20px;
-  color: #555555;  }
+  color: #555555;}
 
 .account-group:not([open]) .group-title::after {
-  content: "⌄";  }
-  color: #666666; }
+  content: "⌄";}
 
 
 #map {
