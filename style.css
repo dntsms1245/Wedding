@@ -82,16 +82,6 @@ body {margin: 0;
   font-size: 20px;
   color: #4F86A8;  }
 
-.gallery {
-  padding: 60px 20px;
-  background-color: #eef6e9;
-  text-align: center;   }
-
-.gallery h2 {
-  margin-bottom: 30px;
-  font-size: 20px;
-  color: #4F86A8;   }
-
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
