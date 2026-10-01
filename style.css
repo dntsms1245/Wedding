@@ -356,3 +356,11 @@ body {margin: 0;
 .account-group:not([open]) .group-title::after {
   content: "⌄";  }
   color: #666666; }
+
+
+#map {
+  width: 100%;
+  height: 230px;
+  margin: 25px 0 20px;
+  border-radius: 6px;
+  overflow: hidden;}
