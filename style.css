@@ -386,8 +386,19 @@ body {margin: 0;
   color: #666666; }
 
 .parking-place {
-  margin-top: 18px;
-  line-height: 1.8;}
+  margin-top: 18px;}
+
+.parking-title {
+  margin: 0 0 4px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #666666;}
+
+.parking-address {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #666666;}
 
 .parking-map-button {
   display: inline-block;
@@ -403,6 +414,14 @@ body {margin: 0;
   text-decoration: none;
   font-size: 13px;}
 
+.parking-recommend {
+  margin-top: 18px !important;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #666666;}
+
 .parking-free {
-  margin-top: 20px !important;}
+  margin-top: 18px !important;
+  font-size: 14px;
+  color: #666666;}
 
