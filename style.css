@@ -425,3 +425,32 @@ body {margin: 0;
   font-size: 14px;
   color: #666666;}
 
+.ending {
+  background-color: #f7fbf5;
+  text-align: center;}
+
+.ending img {
+  width: 100%;
+  height: auto;
+  display: block;}
+
+.ending-text {
+  padding: 45px 20px 60px;}
+
+.ending-label {
+  margin: 0 0 20px;
+  font-size: 15px;
+  letter-spacing: 3px;
+  color: #4F86A8;}
+
+.ending-text p {
+  font-size: 15px;
+  line-height: 2;
+  color: #666666;}
+
+.ending-text h2 {
+  margin-top: 25px;
+  font-size: 20px;
+  color: #333333;}
+
+
