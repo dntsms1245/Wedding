@@ -199,3 +199,34 @@ body {margin: 0;
 
 .map-buttons a {
   gap: 6px;}
+
+.attendance {
+  padding: 60px 30px;
+  text-align: center;
+  background-color: white;  }
+
+.attendance-label {
+  margin-bottom: 18px;
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: #4F86A8;  }
+
+.attendance h2 {
+  margin: 0 0 20px;
+  font-size: 22px;
+  color: #222222;  }
+
+.attendance-text {
+  margin: 0 0 30px;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #666666;  }
+
+.attendance-button {
+  display: inline-block;
+  padding: 14px 30px;
+  border-radius: 8px;
+  background-color: #4F86A8;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;  }
