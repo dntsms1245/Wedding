@@ -75,3 +75,16 @@ geocoder.addressSearch(
     }
   }
 );
+
+
+
+const galleryMoreButton = document.querySelector(".gallery-more-button");
+const galleryExtraImages = document.querySelectorAll(".gallery-extra");
+
+galleryMoreButton.addEventListener("click", function() {
+  galleryExtraImages.forEach(function(image) {
+    image.style.display = "block";
+  });
+
+  galleryMoreButton.style.display = "none";
+});
