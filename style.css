@@ -506,12 +506,15 @@ body {margin: 0;
   content: "⌄";}
 
 
+/* ==== 카카오 지도 ==== */
 #map {
-  width: 100%;
+  width: 94%;
   height: 230px;
-  margin: 25px 0 20px;
+  margin: 25px auto 20px;
   border-radius: 6px;
-  overflow: hidden;}
+  overflow: hidden;
+}
+
 
 
 .transport-info {
