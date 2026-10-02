@@ -126,36 +126,78 @@ paperButton.addEventListener("click", function() {
 });
 
 
+
+
+
 let touchStartX = 0;
-let touchEndX = 0;
-
+let touchCurrentX = 0;
+let isAnimating = false;
 modalImage.addEventListener("touchstart", function(event) {
-  if (!isGalleryModal) return;
-  touchStartX = event.changedTouches[0].screenX;
+  if (!isGalleryModal || isAnimating) return;
+  touchStartX = event.touches[0].clientX;
+  touchCurrentX = touchStartX;
+  // 손가락으로 움직이는 동안에는 애니메이션 끄기
+  modalImage.style.transition = "none";
 });
-
-modalImage.addEventListener("touchend", function(event) {
-  if (!isGalleryModal) return;
-  touchEndX = event.changedTouches[0].screenX;
-  const swipeDistance = touchEndX - touchStartX;
-  // 너무 조금 움직인 것은 스와이프로 판단하지 않음
-  if (Math.abs(swipeDistance) < 50) return;
-
-  // 왼쪽으로 밀기 → 다음 사진
-  if (swipeDistance < 0) {
-    currentGalleryIndex++;
-    if (currentGalleryIndex >= visibleGalleryImages.length) {
-      currentGalleryIndex = 0;
-    }
+modalImage.addEventListener("touchmove", function(event) {
+  if (!isGalleryModal || isAnimating) return;
+  touchCurrentX = event.touches[0].clientX;
+  const moveX = touchCurrentX - touchStartX;
+  // 사진이 손가락을 따라 좌우로 움직임
+  modalImage.style.transform = `translateX(${moveX}px)`;
+});
+modalImage.addEventListener("touchend", function() {
+  if (!isGalleryModal || isAnimating) return;
+  const moveX = touchCurrentX - touchStartX;
+  // 50px 이하로 움직였으면 원래 자리로 돌아오기
+  if (Math.abs(moveX) < 50) {
+    modalImage.style.transition = "transform 0.2s ease";
+    modalImage.style.transform = "translateX(0)";
+    return;
   }
+  isAnimating = true;
+  const nextPhoto = moveX < 0;
+  // 기존 사진이 옆으로 빠져나감
+  modalImage.style.transition =
+    "transform 0.22s ease, opacity 0.22s ease";
 
-  // 오른쪽으로 밀기 → 이전 사진
-  else {
-    currentGalleryIndex--;
-    if (currentGalleryIndex < 0) {
-      currentGalleryIndex = visibleGalleryImages.length - 1;
+  modalImage.style.transform =
+    nextPhoto
+      ? "translateX(-120%)"
+      : "translateX(120%)";
+  modalImage.style.opacity = "0";
+  setTimeout(function() {
+    // 다음 / 이전 사진 번호 계산
+    if (nextPhoto) {
+      currentGalleryIndex++;
+      if (currentGalleryIndex >= visibleGalleryImages.length) {
+        currentGalleryIndex = 0;
+      }
+    } else {
+      currentGalleryIndex--;
+      if (currentGalleryIndex < 0) {
+        currentGalleryIndex = visibleGalleryImages.length - 1;
+      }
     }
-  }
-
-  modalImage.src = visibleGalleryImages[currentGalleryIndex].src;
+    // 새로운 사진으로 교체
+    modalImage.src =
+      visibleGalleryImages[currentGalleryIndex].src;
+    // 새 사진을 반대편에서 살짝 대기
+    modalImage.style.transition = "none";
+    modalImage.style.transform =
+      nextPhoto
+        ? "translateX(60px)"
+        : "translateX(-60px)";
+    modalImage.style.opacity = "0";
+    // 가운데로 부드럽게 등장
+    requestAnimationFrame(function() {
+      requestAnimationFrame(function() {
+        modalImage.style.transition =
+          "transform 0.22s ease, opacity 0.22s ease";
+        modalImage.style.transform = "translateX(0)";
+        modalImage.style.opacity = "1";
+        isAnimating = false;
+      });
+    });
+  }, 220);
 });
