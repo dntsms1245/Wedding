@@ -486,3 +486,13 @@ body {margin: 0;
   color: #333333;}
 
 
+.footer {
+  padding: 22px 20px;
+  background-color: #eeeeee;
+  text-align: center;  }
+
+.footer p {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.7;
+  color: #999999;  }
