@@ -520,3 +520,12 @@ body {margin: 0;
   max-height: 90%;
   border-radius: 8px;
   user-select: none;  }
+
+
+.gallery img,
+.modal-image {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
