@@ -4,6 +4,36 @@
 
 if (!Kakao.isInitialized()) {
   Kakao.init("여기에_JavaScript키");  }
+const kakaoShareButton = document.getElementById("kakaoShareButton");
+kakaoShareButton.addEventListener("click", function() {
+  Kakao.Share.sendDefault({
+    objectType: "feed",
+    
+    content: {
+      title: "성우 ♥ 원경 결혼합니다",
+      description: "2026. 12. 13. SUN 17:00 · 리베라 호텔 3층 몽블랑홀",
+      imageUrl:
+        "https://dntsms1245.github.io/Wedding/images/share.jpg",
+      link: {
+        mobileWebUrl:
+          "https://dntsms1245.github.io/Wedding/",
+        webUrl:
+          "https://dntsms1245.github.io/Wedding/"
+      }
+    },
+    buttons: [
+      {
+        title: "청첩장 보러가기",
+        link: {
+          mobileWebUrl:
+            "https://dntsms1245.github.io/Wedding/",
+          webUrl:
+            "https://dntsms1245.github.io/Wedding/"
+        }
+      }
+    ]
+  });
+});
 
 
 
