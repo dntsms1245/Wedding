@@ -77,3 +77,62 @@ guestSubmitButton.addEventListener("click", async function() {
     guestSubmitButton.textContent = "마음 남기기";
   }
 });
+
+
+
+
+// 방명록 목록 불러오기
+const guestbookList = document.getElementById("guestbookList");
+
+const guestbookQuery = query(
+  collection(db, "guestbook"),
+  orderBy("createdAt", "desc")
+);
+
+onSnapshot(guestbookQuery, function(snapshot) {
+
+  guestbookList.innerHTML = "";
+
+  if (snapshot.empty) {
+    const emptyMessage = document.createElement("p");
+    emptyMessage.textContent = "첫 축하 메시지를 남겨주세요. 🤍";
+    guestbookList.appendChild(emptyMessage);
+    return;
+  }
+
+  snapshot.forEach(function(doc) {
+
+    const data = doc.data();
+
+    const item = document.createElement("div");
+    item.className = "guestbook-item";
+
+    const name = document.createElement("p");
+    name.className = "guestbook-item-name";
+    name.textContent = data.name;
+
+    const message = document.createElement("p");
+    message.className = "guestbook-item-message";
+    message.textContent = data.message;
+
+    const date = document.createElement("p");
+    date.className = "guestbook-item-date";
+
+    if (data.createdAt) {
+      const createdDate = data.createdAt.toDate();
+
+      date.textContent =
+        createdDate.getFullYear() + "." +
+        String(createdDate.getMonth() + 1).padStart(2, "0") + "." +
+        String(createdDate.getDate()).padStart(2, "0");
+    } else {
+      date.textContent = "방금";
+    }
+
+    item.appendChild(name);
+    item.appendChild(message);
+    item.appendChild(date);
+
+    guestbookList.appendChild(item);
+  });
+});
