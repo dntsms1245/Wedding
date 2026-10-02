@@ -79,7 +79,7 @@ geocoder.addressSearch(
       });
 
       const infowindow = new kakao.maps.InfoWindow({
-  content: '<div style="padding:6px 10px;font-size:13px;white-space:nowrap;text-align:center;">리베라 호텔</div>'
+  content: '<div style="width:70px;padding:6px 8px;font-size:13px;white-space:nowrap;text-align:center;">리베라 호텔</div>'
 });
           infowindow.open(map, marker);
 
