@@ -485,14 +485,33 @@ body {margin: 0;
   font-size: 20px;
   color: #333333;}
 
-
-.footer {
-  padding: 22px 20px;
+.bottom-area {
+  padding: 24px 20px 28px;
   background-color: #eeeeee;
   text-align: center;  }
 
-.footer p {
+.paper-invitation p {
+  margin: 0 0 18px;
+  font-size: 12px;
+  line-height: 1.8;
+  color: #777777;  }
+
+.paper-button {
+  margin-left: 6px;
+  padding: 4px 8px;
+
+  border: none;
+  background: none;
+
+  font-family: inherit;
+  font-size: 12px;
+  color: #4F86A8;
+  text-decoration: underline;
+
+  cursor: pointer;  }
+
+.footer-text {
   margin: 0;
   font-size: 11px;
-  line-height: 1.7;
-  color: #999999;  }
+  color: #aaaaaa;
+  letter-spacing: 0.3px;  }
