@@ -238,4 +238,31 @@ pigEaster.addEventListener("click", function() {
 
 
 
+// =========================
+// D-DAY
+// =========================
+
+const weddingDate = new Date(2026, 11, 13);
+
+const today = new Date();
+today.setHours(0, 0, 0, 0);
+
+const diffTime = weddingDate - today;
+const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+const ddayNumber = document.getElementById("ddayNumber");
+
+if (diffDays > 0) {
+  ddayNumber.textContent = "D-" + diffDays;
+} else if (diffDays === 0) {
+  ddayNumber.textContent = "D-DAY";
+} else {
+  ddayNumber.textContent = "♥";}
+
+
+
+
+
+
+
 
