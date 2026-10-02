@@ -22,47 +22,89 @@ body {margin: 0;
 
 /* 디데이 */
 .dday {
-  padding: 30px 20px;
-  background-color: #f3f8f0;  }
+  padding: 38px 22px;
+  background-color: #f3f8f0;
+}
 
 .dday-card {
+  position: relative;
   max-width: 320px;
   margin: 0 auto;
-  padding: 28px 20px;
-  background: #ffffff;
-  border: 1px solid #dfe8d8;
-  border-radius: 18px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  padding: 34px 24px 32px;
+  background: linear-gradient(
+    180deg,
+    #fffefb 0%,
+    #fbfaf5 100%
+  );
+
+  border: 1px solid #d9dfd1;
+  border-radius: 14px;
   text-align: center;
+  box-shadow:
+    0 8px 25px rgba(70, 80, 60, 0.06);
 }
+
+
+/* 카드 위 작은 장식 */
+.dday-card::before {
+  content: "♥";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 10px;
+  background-color: #f3f8f0;
+  font-size: 13px;
+  color: #9aa995;
+}
+
 
 .dday-label {
-  margin: 0 0 14px 0;
-  font-size: 12px;
-  letter-spacing: 3px;
-  color: #6f93ac;
+  margin: 0;
+  font-size: 11px;
+  letter-spacing: 4px;
+
+  color: #7890a0;
 }
 
-.dday-text {
-  margin: 0 0 14px 0;
-  font-size: 14px;
-  color: #666666;
-  line-height: 1.7;
+
+/* WEDDING DAY 아래 장식선 */
+.dday-label::after {
+  content: "";
+  display: block;
+  width: 34px;
+  height: 1px;
+  margin: 14px auto 20px;
+  background-color: #c7cfc0;
 }
+
+
+.dday-text {
+  margin: 0 0 12px;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #77776f;
+}
+
 
 .dday-number {
   margin: 0;
-  font-size: 34px;
-  font-weight: 700;
-  color: #4f86a8;
-  letter-spacing: 2px;
+  font-size: 36px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  color: #4F86A8;
 }
 
+
 .dday-date {
-  margin: 10px 0 0 0;
-  font-size: 13px;
-  color: #999999;
-  letter-spacing: 1px;  }
+  margin: 12px 0 0;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #99988f;
+}
+
+
+
 
 
 
