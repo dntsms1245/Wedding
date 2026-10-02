@@ -218,3 +218,24 @@ modalImage.addEventListener("touchend", function() {
     });
   }, 220);
 });
+
+
+
+// =========================
+// 이스터에그
+// =========================
+const easterSpot = document.querySelector(".easter-spot");
+const pigEaster = document.querySelector(".pig-easter");
+easterSpot.addEventListener("click", function() {
+  pigEaster.style.display = "block";
+});
+pigEaster.addEventListener("click", function() {
+  pigEaster.style.display = "none";
+});
+
+
+
+
+
+
+
