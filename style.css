@@ -812,6 +812,15 @@ body {margin: 0;
   cursor: pointer;
 }
 
+
+.guestbook-item-message.expanded {
+  display: block;
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+
+
 .guestbook-item-date {
   margin-top: 5px;
   font-size: 11px;
