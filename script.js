@@ -1,3 +1,16 @@
+// =========================
+// 카카오톡 공유 SDK
+// =========================
+
+if (!Kakao.isInitialized()) {
+  Kakao.init("여기에_JavaScript키");  }
+
+
+
+
+
+
+
 const galleryImages = document.querySelectorAll(".gallery img");
 
 const modal = document.getElementById("imageModal");
