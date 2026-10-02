@@ -527,5 +527,32 @@ body {margin: 0;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   user-select: none;
-  -webkit-user-drag: none;
-}
+  -webkit-user-drag: none;  }
+
+
+.map-label {
+  position: relative;
+
+  padding: 6px 10px;
+
+  background-color: white;
+  border: 1px solid #999999;
+  border-radius: 3px;
+
+  font-size: 13px;
+  color: #222222;
+  white-space: nowrap;
+
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);  }
+
+
+.map-label::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -7px;
+  transform: translateX(-50%);
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid white;  }
+
