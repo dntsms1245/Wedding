@@ -101,3 +101,14 @@ galleryMoreButton.addEventListener("click", function() {
     galleryMoreButton.textContent = "🤯사진 접기 −";
   }
 });
+
+
+
+const paperButton = document.querySelector(".paper-button");
+
+paperButton.addEventListener("click", function() {
+  const paperImage = paperButton.dataset.image;
+
+  modalImage.src = paperImage;
+  modal.style.display = "flex";
+});
