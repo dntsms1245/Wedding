@@ -556,3 +556,35 @@ body {margin: 0;
   border-right: 7px solid transparent;
   border-top: 7px solid white;  }
 
+
+
+
+
+.easter-spot {
+  position: absolute;
+  /* 성우 얼굴 위치 - 나중에 숫자 조절 */
+  left: 27%;
+  top: 31%;
+  width: 18%;
+  height: 18%;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  z-index: 5;}
+
+.pig-easter {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 120px;
+  z-index: 10000;
+  cursor: pointer;
+  user-select: none;  }
+
+
+
+
+
+
