@@ -124,3 +124,38 @@ paperButton.addEventListener("click", function() {
   modalImage.src = paperImage;
   modal.style.display = "flex";
 });
+
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+modalImage.addEventListener("touchstart", function(event) {
+  if (!isGalleryModal) return;
+  touchStartX = event.changedTouches[0].screenX;
+});
+
+modalImage.addEventListener("touchend", function(event) {
+  if (!isGalleryModal) return;
+  touchEndX = event.changedTouches[0].screenX;
+  const swipeDistance = touchEndX - touchStartX;
+  // 너무 조금 움직인 것은 스와이프로 판단하지 않음
+  if (Math.abs(swipeDistance) < 50) return;
+
+  // 왼쪽으로 밀기 → 다음 사진
+  if (swipeDistance < 0) {
+    currentGalleryIndex++;
+    if (currentGalleryIndex >= visibleGalleryImages.length) {
+      currentGalleryIndex = 0;
+    }
+  }
+
+  // 오른쪽으로 밀기 → 이전 사진
+  else {
+    currentGalleryIndex--;
+    if (currentGalleryIndex < 0) {
+      currentGalleryIndex = visibleGalleryImages.length - 1;
+    }
+  }
+
+  modalImage.src = visibleGalleryImages[currentGalleryIndex].src;
+});
