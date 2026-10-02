@@ -499,19 +499,24 @@ body {margin: 0;
 .paper-button {
   margin-left: 6px;
   padding: 4px 8px;
-
   border: none;
   background: none;
-
   font-family: inherit;
   font-size: 12px;
   color: #4F86A8;
   text-decoration: underline;
-
   cursor: pointer;  }
+
 
 .footer-text {
   margin: 0;
   font-size: 11px;
   color: #aaaaaa;
   letter-spacing: 0.3px;  }
+
+
+.modal-image {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  user-select: none;  }
