@@ -1,6 +1,8 @@
 const galleryImages = document.querySelectorAll(".gallery img");
 
-
+const modal = document.getElementById("imageModal");
+const modalImage = document.getElementById("modalImage");
+const closeButton = document.querySelector(".modal-close");
 
 
 galleryImages.forEach(function(image) {
@@ -9,19 +11,13 @@ galleryImages.forEach(function(image) {
   });
   image.setAttribute("draggable", "false");
 });
+
+
 modalImage.addEventListener("contextmenu", function(event) {
   event.preventDefault();
 });
+
 modalImage.setAttribute("draggable", "false");
-
-
-
-
-
-const modal = document.getElementById("imageModal");
-const modalImage = document.getElementById("modalImage");
-const closeButton = document.querySelector(".modal-close");
-
 let visibleGalleryImages = [];
 let currentGalleryIndex = 0;
 let isGalleryModal = false;
