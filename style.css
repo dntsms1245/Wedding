@@ -1,25 +1,41 @@
-@font-face {/* 풀숲 / 고급 종이 테마: 기본색은 A와 B 두 단계로 관리합니다. */
+/* 풀숲 / 고급 종이 테마: 기본색은 A와 B 두 단계로 관리합니다. */
+
 :root {
-  --green-light: #F4F6EA; /* A: 크림빛 연두 */
-  --green-medium: #E3EBDD; /* B: 차분한 세이지 */
+  --green-light: #F4F6EA;
+  --green-medium: #E3EBDD;
   --card-sage: #E8EEDC;
   --paper-surface: #FAFBF5;
   --text-main: #303B32;
   --text-sub: #5D675D;
   --line-color: #CED8C8;
   --accent-blue: #4F86A8;
-  /* 반복 무늬 없이 넓고 흐린 명암만 겹칩니다. */
+
   --paper-texture:
-    radial-gradient(ellipse at 18% 24%, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0) 68%),
-    radial-gradient(ellipse at 84% 76%, rgba(92, 110, 77, 0.03), rgba(92, 110, 77, 0) 72%),
-    linear-gradient(112deg, rgba(255, 255, 255, 0.03), rgba(112, 125, 92, 0.015) 48%, rgba(255, 255, 255, 0.03));
+    radial-gradient(
+      ellipse at 18% 24%,
+      rgba(255, 255, 255, 0.06),
+      rgba(255, 255, 255, 0) 68%
+    ),
+    radial-gradient(
+      ellipse at 84% 76%,
+      rgba(92, 110, 77, 0.03),
+      rgba(92, 110, 77, 0) 72%
+    ),
+    linear-gradient(
+      112deg,
+      rgba(255, 255, 255, 0.03),
+      rgba(112, 125, 92, 0.015) 48%,
+      rgba(255, 255, 255, 0.03)
+    );
 }
 
 @font-face {
   font-family: "GowunDodumLocal";
   src: url("fonts/GowunDodum-Regular.ttf") format("truetype");
   font-weight: 400;
-  font-style: normal;  }
+  font-style: normal;
+}
+
 
 body {
   margin: 0;
