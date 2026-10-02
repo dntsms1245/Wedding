@@ -44,6 +44,32 @@ body {margin: 0;
     0 8px 25px rgba(70, 80, 60, 0.06);
 }
 
+.dday-leaf {
+  position: absolute;
+  font-family: Georgia, serif;
+  font-size: 23px;
+  color: #bac5b4;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+
+/* 왼쪽 위 장식 */
+.dday-leaf-left {
+  left: 16px;
+  top: 14px;
+  transform: rotate(-25deg);
+}
+
+
+/* 오른쪽 아래 장식 */
+.dday-leaf-right {
+  right: 16px;
+  bottom: 14px;
+  transform: rotate(155deg);
+}
+
+
 
 /* 카드 위 작은 장식 */
 .dday-card::before {
