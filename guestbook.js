@@ -80,64 +80,230 @@ guestSubmitButton.addEventListener("click", async function() {
 
 
 
-
 // 방명록 목록 불러오기
 const guestbookList = document.getElementById("guestbookList");
+const guestbookPagination = document.getElementById("guestbookPagination");
+
+const ITEMS_PER_PAGE = 4;
+
+let guestbookData = [];
+let currentPage = 1;
+
 
 const guestbookQuery = query(
   collection(db, "guestbook"),
   orderBy("createdAt", "desc")
 );
 
-onSnapshot(guestbookQuery, function(snapshot) {
+
+// 한 페이지의 방명록 표시
+function renderGuestbook() {
 
   guestbookList.innerHTML = "";
 
-  if (snapshot.empty) {
+  if (guestbookData.length === 0) {
     const emptyMessage = document.createElement("p");
     emptyMessage.textContent = "첫 축하 메시지를 남겨주세요. 🤍";
     guestbookList.appendChild(emptyMessage);
+
+    guestbookPagination.innerHTML = "";
     return;
   }
 
-  snapshot.forEach(function(doc) {
 
-    const data = doc.data();
+  const totalPages = Math.ceil(
+    guestbookData.length / ITEMS_PER_PAGE
+  );
+
+
+  // 현재 페이지가 범위를 넘어가는 경우 방지
+  if (currentPage > totalPages) {
+    currentPage = totalPages;
+  }
+
+
+  const startIndex =
+    (currentPage - 1) * ITEMS_PER_PAGE;
+
+  const endIndex =
+    startIndex + ITEMS_PER_PAGE;
+
+  const pageData =
+    guestbookData.slice(startIndex, endIndex);
+
+
+  pageData.forEach(function(data) {
 
     const item = document.createElement("div");
     item.className = "guestbook-item";
 
+
+    // 이름 + 날짜를 한 줄에 배치
+    const head = document.createElement("div");
+    head.className = "guestbook-item-head";
+
+
     const name = document.createElement("p");
     name.className = "guestbook-item-name";
     name.textContent = data.name;
-
-    const message = document.createElement("p");
-    message.className = "guestbook-item-message";
-    message.textContent = data.message;
-
-    message.addEventListener("click", function() {
-    message.classList.toggle("expanded");
-    });
 
 
     const date = document.createElement("p");
     date.className = "guestbook-item-date";
 
     if (data.createdAt) {
-      const createdDate = data.createdAt.toDate();
+
+      const createdDate =
+        data.createdAt.toDate();
 
       date.textContent =
         createdDate.getFullYear() + "." +
-        String(createdDate.getMonth() + 1).padStart(2, "0") + "." +
-        String(createdDate.getDate()).padStart(2, "0");
+        String(
+          createdDate.getMonth() + 1
+        ).padStart(2, "0") + "." +
+        String(
+          createdDate.getDate()
+        ).padStart(2, "0");
+
     } else {
+
       date.textContent = "방금";
+
     }
+    head.appendChild(name);
+    head.appendChild(date);
 
-    item.appendChild(name);
+
+    // 메시지
+    const message =
+      document.createElement("p");
+    message.className =
+      "guestbook-item-message";
+    message.textContent =
+      data.message;
+
+
+    // 메시지 터치 → 펼치기 / 접기
+    message.addEventListener(
+      "click",
+      function() {
+        message.classList.toggle(
+          "expanded"
+        );
+
+      }
+    );
+
+
+    item.appendChild(head);
     item.appendChild(message);
-    item.appendChild(date);
-
     guestbookList.appendChild(item);
   });
-});
+  renderPagination(totalPages);
+}
+
+
+// 페이지 번호 만들기
+function renderPagination(totalPages) {
+  guestbookPagination.innerHTML = "";
+  if (totalPages <= 1) {
+    return;
+  }
+
+
+  // 이전 페이지
+  const prevButton =
+    document.createElement("button");
+  prevButton.textContent = "‹";
+  prevButton.disabled =
+    currentPage === 1;
+  prevButton.addEventListener(
+    "click",
+    function() {
+      currentPage--;
+      renderGuestbook();
+
+    }
+  );
+  guestbookPagination.appendChild(
+    prevButton
+  );
+
+
+  // 한 번에 최대 5개 페이지 번호만 표시
+  let startPage =
+    Math.max(1, currentPage - 2);
+
+  let endPage =
+    Math.min(
+      totalPages,
+      startPage + 4
+    );
+
+  if (endPage - startPage < 4) {
+    startPage =
+      Math.max(1, endPage - 4);
+  }
+
+
+  for (
+    let page = startPage;
+    page <= endPage;
+    page++
+  ) {
+
+    const pageButton =
+      document.createElement("button");
+    pageButton.textContent = page;
+    if (page === currentPage) {
+      pageButton.classList.add("active");
+    }
+
+
+    pageButton.addEventListener(
+      "click",
+      function() {
+        currentPage = page;
+        renderGuestbook();
+      }
+    );
+
+
+    guestbookPagination.appendChild(
+      pageButton
+    );
+  }
+
+
+  // 다음 페이지
+  const nextButton =
+    document.createElement("button");
+  nextButton.textContent = "›";
+  nextButton.disabled =
+    currentPage === totalPages;
+  nextButton.addEventListener(
+    "click",
+    function() {
+      currentPage++;
+      renderGuestbook();
+    }
+  );
+  guestbookPagination.appendChild(
+    nextButton
+  );
+}
+
+
+// Firestore가 바뀔 때마다 갱신
+onSnapshot(
+  guestbookQuery,
+  function(snapshot) {
+    guestbookData = [];
+    snapshot.forEach(function(doc) {
+      guestbookData.push(
+        doc.data()
+      );
+    });
+    renderGuestbook();
+  }
+);
