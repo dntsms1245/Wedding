@@ -1,4 +1,16 @@
 const galleryImages = document.querySelectorAll(".gallery img");
+
+galleryImages.forEach(function(image) {
+  image.addEventListener("contextmenu", function(event) {
+    event.preventDefault();
+  });
+  image.setAttribute("draggable", "false");
+});
+modalImage.addEventListener("contextmenu", function(event) {
+  event.preventDefault();
+});
+modalImage.setAttribute("draggable", "false");
+
 const modal = document.getElementById("imageModal");
 const modalImage = document.getElementById("modalImage");
 const closeButton = document.querySelector(".modal-close");
@@ -8,14 +20,12 @@ let currentGalleryIndex = 0;
 let isGalleryModal = false;
 
 galleryImages.forEach(function(image) {
-
   image.addEventListener("click", function() {
-
     // 현재 화면에 보이는 사진만 가져오기
     visibleGalleryImages = Array.from(galleryImages).filter(function(img) {
       return img.offsetParent !== null;
     });
-    
+  
     currentGalleryIndex = visibleGalleryImages.indexOf(image);
     isGalleryModal = true;
     modalImage.src = image.src;
