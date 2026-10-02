@@ -77,15 +77,27 @@ geocoder.addressSearch(
 );
 
 
-
 const galleryMoreButton = document.querySelector(".gallery-more-button");
 const galleryExtraImages = document.querySelectorAll(".gallery-extra");
 
 galleryMoreButton.addEventListener("click", function() {
 
-  galleryExtraImages.forEach(function(image) {
-    image.classList.add("show");
-  });
+  const isOpen = galleryExtraImages[0].classList.contains("show");
 
-  galleryMoreButton.style.display = "none";
+  if (isOpen) {
+
+    galleryExtraImages.forEach(function(image) {
+      image.classList.remove("show");
+    });
+
+    galleryMoreButton.textContent = "사진 더보기 +";
+
+  } else {
+
+    galleryExtraImages.forEach(function(image) {
+      image.classList.add("show");
+    });
+
+    galleryMoreButton.textContent = "🤯사진 접기 −";
+  }
 });
