@@ -613,5 +613,29 @@ body {margin: 0;
 
 
 
+/* 카톡링크 공유 */
+.share-section {
+  padding: 28px 20px;
+  text-align: center;
+  background-color: #f7fbf5;  }
+
+.kakao-share-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 10px 18px;
+  border: 1px solid #eadf9d;
+  border-radius: 30px;
+  background-color: #fff7c8;
+  color: #4b4430;
+  font-family: inherit;
+  font-size: 13px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  cursor: pointer;  }
+
+.share-icon {
+  font-size: 15px;  }
+
 
 
