@@ -3,7 +3,7 @@
 // =========================
 
 if (!Kakao.isInitialized()) {
-  Kakao.init("여기에_JavaScript키");  }
+  Kakao.init("19cd668ef606df91321cf67504fb96d9");  }
 const kakaoShareButton = document.getElementById("kakaoShareButton");
 kakaoShareButton.addEventListener("click", function() {
   Kakao.Share.sendDefault({
