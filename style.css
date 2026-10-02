@@ -146,7 +146,8 @@ body {margin: 0;
 .greeting {
   padding: 60px 30px;
   text-align: center;
-  background-color: #f7fbf5;  }
+  background-color: #f1f7ed;
+}
 
 .greeting h2 {
   margin-bottom: 35px;
