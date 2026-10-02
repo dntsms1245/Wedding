@@ -19,28 +19,50 @@ body {margin: 0;
   box-sizing: border-box; }
 
 
+
+/* 디데이 */
 .dday {
-  padding: 32px 20px;
+  padding: 30px 20px;
+  background-color: #f3f8f0;  }
+
+.dday-card {
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 28px 20px;
+  background: #ffffff;
+  border: 1px solid #dfe8d8;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
   text-align: center;
-  background-color: #f7fbf5; }
+}
+
+.dday-label {
+  margin: 0 0 14px 0;
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #6f93ac;
+}
 
 .dday-text {
-  margin: 0 0 10px;
-  font-size: 13px;
-  color: #777777; }
+  margin: 0 0 14px 0;
+  font-size: 14px;
+  color: #666666;
+  line-height: 1.7;
+}
 
 .dday-number {
-  font-size: 32px;
-  font-weight: 600;
+  margin: 0;
+  font-size: 34px;
+  font-weight: 700;
+  color: #4f86a8;
   letter-spacing: 2px;
-  color: #4F86A8; }
+}
 
 .dday-date {
-  margin: 8px 0 0;
-  font-size: 12px;
-  letter-spacing: 1px;
-  color: #999999;  }
-
+  margin: 10px 0 0 0;
+  font-size: 13px;
+  color: #999999;
+  letter-spacing: 1px;  }
 
 
 
