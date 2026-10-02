@@ -718,3 +718,109 @@ body {margin: 0;
 
 
 
+
+/* 방명록 */
+.guestbook {
+  padding: 60px 25px;
+  text-align: center;
+  background-color: #eef6e9;
+}
+
+.guestbook-label {
+  margin-bottom: 18px;
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: #4F86A8;
+}
+
+.guestbook h2 {
+  margin: 0 0 20px;
+  font-size: 22px;
+  color: #222222;
+}
+
+.guestbook-text {
+  margin: 0 0 30px;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #666666;
+}
+
+.guestbook-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.guestbook-form input,
+.guestbook-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+
+  border: 1px solid #d7e2d3;
+  border-radius: 8px;
+
+  background-color: white;
+  color: #444444;
+
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.guestbook-form textarea {
+  resize: none;
+}
+
+#guestSubmitButton {
+  margin-top: 5px;
+  padding: 12px 20px;
+
+  border: none;
+  border-radius: 8px;
+
+  background-color: #4F86A8;
+  color: white;
+
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.guestbook-list {
+  margin-top: 35px;
+  text-align: left;
+}
+
+.guestbook-item {
+  padding: 18px 0;
+  border-top: 1px solid #d9e2d6;
+}
+
+.guestbook-item:first-child {
+  border-top: none;
+}
+
+.guestbook-item-name {
+  margin: 0 0 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333333;
+}
+
+.guestbook-item-message {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #666666;
+}
+
+.guestbook-item-date {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #999999;  }
+
+
+
+
+
