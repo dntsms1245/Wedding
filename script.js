@@ -3,11 +3,23 @@ const modal = document.getElementById("imageModal");
 const modalImage = document.getElementById("modalImage");
 const closeButton = document.querySelector(".modal-close");
 
+let visibleGalleryImages = [];
+let currentGalleryIndex = 0;
+let isGalleryModal = false;
 
 galleryImages.forEach(function(image) {
+
   image.addEventListener("click", function() {
-    modal.style.display = "flex";
+
+    // 현재 화면에 보이는 사진만 가져오기
+    visibleGalleryImages = Array.from(galleryImages).filter(function(img) {
+      return img.offsetParent !== null;
+    });
+    
+    currentGalleryIndex = visibleGalleryImages.indexOf(image);
+    isGalleryModal = true;
     modalImage.src = image.src;
+    modal.style.display = "flex";
   });
 });
 
