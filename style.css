@@ -18,6 +18,32 @@ body {margin: 0;
   text-align: center;
   box-sizing: border-box; }
 
+
+.dday {
+  padding: 32px 20px;
+  text-align: center;
+  background-color: #f7fbf5; }
+
+.dday-text {
+  margin: 0 0 10px;
+  font-size: 13px;
+  color: #777777; }
+
+.dday-number {
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #4F86A8; }
+
+.dday-date {
+  margin: 8px 0 0;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #999999;  }
+
+
+
+
 .invitation img {
   width: 100%;
   height: auto;
