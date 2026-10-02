@@ -115,6 +115,11 @@ onSnapshot(guestbookQuery, function(snapshot) {
     message.className = "guestbook-item-message";
     message.textContent = data.message;
 
+    message.addEventListener("click", function() {
+    message.classList.toggle("expanded");
+    });
+
+
     const date = document.createElement("p");
     date.className = "guestbook-item-date";
 
