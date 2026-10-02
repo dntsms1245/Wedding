@@ -1,5 +1,8 @@
 const galleryImages = document.querySelectorAll(".gallery img");
 
+
+
+
 galleryImages.forEach(function(image) {
   image.addEventListener("contextmenu", function(event) {
     event.preventDefault();
@@ -10,6 +13,10 @@ modalImage.addEventListener("contextmenu", function(event) {
   event.preventDefault();
 });
 modalImage.setAttribute("draggable", "false");
+
+
+
+
 
 const modal = document.getElementById("imageModal");
 const modalImage = document.getElementById("modalImage");
