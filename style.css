@@ -827,6 +827,62 @@ body {margin: 0;
   color: #999999;  }
 
 
+.guestbook-item {
+  padding: 10px 0;
+}
+
+.guestbook-item-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.guestbook-item-name {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333333;
+}
+
+.guestbook-item-date {
+  margin: 0;
+  font-size: 11px;
+  color: #999999;
+}
+
+.guestbook-pagination {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.guestbook-pagination button {
+  min-width: 30px;
+  height: 30px;
+  padding: 0 7px;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #777777;
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.guestbook-pagination button.active {
+  background-color: #4F86A8;
+  color: white;
+}
+
+.guestbook-pagination button:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+
+
 
 
 
