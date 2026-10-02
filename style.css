@@ -71,20 +71,6 @@ body {margin: 0;
 
 
 
-/* 카드 위 작은 장식 */
-.dday-card::before {
-  content: "♥";
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 0 10px;
-  background-color: #f3f8f0;
-  font-size: 13px;
-  color: #9aa995;
-}
-
-
 .dday-label {
   margin: 0;
   font-size: 11px;
