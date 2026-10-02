@@ -91,15 +91,19 @@ geocoder.addressSearch(
         position: coords
       });
 
-      const infowindow = new kakao.maps.InfoWindow({
-  content: '<div style="width:60px;padding:6px 8px;font-size:13px;white-space:nowrap;text-align:center;">리베라 호텔</div>'
+      const label = document.createElement("div");
+label.className = "map-label";
+label.textContent = "리베라 호텔";
+const customOverlay = new kakao.maps.CustomOverlay({
+  position: coords,
+  content: label,
+  xAnchor: 0.5,
+  yAnchor: 1.8
 });
-          infowindow.open(map, marker);
+customOverlay.setMap(map);
 
       map.setCenter(coords);
-    }
-  }
-);
+    }});
 
 
 const galleryMoreButton = document.querySelector(".gallery-more-button");
