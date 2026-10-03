@@ -13,7 +13,7 @@ kakaoShareButton.addEventListener("click", function() {
       title: "성우 ♥ 원경 결혼합니다",
       description: "2026. 12. 13. SUN 17:00 · 리베라 호텔 3층 몽블랑홀",
       imageUrl:
-  "https://dntsms1245.github.io/Wedding/images/share.jpg?v=2",
+  "https://dntsms1245.github.io/Wedding/images/share2.jpg?v=2",
       link: {
         mobileWebUrl:
           "https://dntsms1245.github.io/Wedding/",
