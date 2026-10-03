@@ -227,6 +227,69 @@ body {
   line-height: 2;
   color: var(--text-sub);  }
 
+
+
+/* =========================
+   신랑 / 신부 프로필 카드
+========================= */
+
+.couple-profile {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+
+  margin-top: 34px;
+}
+
+.profile-card {
+  padding: 24px 14px 22px;
+
+  background-color: var(--card-sage);
+  background-image: var(--paper-texture);
+
+  border: 1px solid var(--line-color);
+  border-radius: 16px;
+
+  text-align: center;
+
+  box-shadow:
+    0 6px 18px rgba(70, 80, 60, 0.05);
+}
+
+.profile-role {
+  margin: 0 0 10px;
+
+  font-size: 13px;
+  letter-spacing: 2px;
+
+  color: #8b9989;
+}
+
+.profile-name {
+  margin: 0 0 16px;
+
+  font-size: 21px;
+  font-weight: 500;
+
+  color: var(--text-main);
+}
+
+.profile-family {
+  margin: 0;
+
+  font-size: 13px;
+  line-height: 1.8;
+
+  color: var(--text-sub);
+}
+
+/* =========================
+   ---------------
+========================= */
+
+
+
+
 .parents {
   margin-top: 40px;
   padding-top: 25px;
