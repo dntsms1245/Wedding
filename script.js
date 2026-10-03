@@ -43,6 +43,14 @@ kakaoShareButton.addEventListener("click", function() {
 
 const galleryImages = document.querySelectorAll(".gallery img");
 
+const GALLERY_VERSION = "2";
+galleryImages.forEach(function(image) {
+  const originalSrc = image.getAttribute("src");
+  image.src = originalSrc + "?v=" + GALLERY_VERSION;
+});
+
+
+
 const modal = document.getElementById("imageModal");
 const modalImage = document.getElementById("modalImage");
 const closeButton = document.querySelector(".modal-close");
