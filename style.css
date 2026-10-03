@@ -350,7 +350,10 @@ body {
   border-radius: 0;
   box-shadow: none;
 
-  transform: scale(1.67);
+  position: relative;
+  top: 4px;
+
+  transform: scale(1.74);
   transform-origin: 68% 30%;
 }
 
