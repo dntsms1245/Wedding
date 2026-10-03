@@ -906,8 +906,8 @@ body {
 .pig-easter {
   display: none;
   position: fixed;
-  left: 50%;
-  top: 50%;
+  left: 40%;
+  top: 45%;
   transform: translate(-50%, -50%);
   font-size: 120px;
   z-index: 10000;
