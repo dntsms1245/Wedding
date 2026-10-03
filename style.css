@@ -285,12 +285,12 @@ body {
 
 
 .profile-photo {
-  width: 120px;
-  height: 120px;
+  width: 126px;
+  height: 126px;
   margin: 0 auto 14px;
 
   object-fit: cover;
-  object-position: center 28%;
+  object-position: center 30%;
 
   border-radius: 50%;
   border: 3px solid rgba(255, 255, 255, 0.65);
