@@ -242,11 +242,14 @@ body {
 
 .couple-profile {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  width: 100%;
   margin-top: 34px;
+  box-sizing: border-box;
 }
+
+
 
 .profile-card {
   padding: 24px 14px 22px;
@@ -256,12 +259,17 @@ body {
 
   border: 1px solid var(--line-color);
   border-radius: 16px;
-
   text-align: center;
 
   box-shadow:
     0 6px 18px rgba(70, 80, 60, 0.05);
+    min-width: 0;
+  box-sizing: border-box;
 }
+
+
+
+
 
 .profile-role {
   margin: 0 0 10px;
