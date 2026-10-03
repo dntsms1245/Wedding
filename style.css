@@ -227,6 +227,13 @@ body {
   line-height: 2;
   color: var(--text-sub);  }
 
+.greeting .profile-description {
+  margin: 18px 0 0;
+  font-size: 12px;
+  line-height: 1.8;
+  color: #7a8578;
+}
+
 
 
 /* =========================
