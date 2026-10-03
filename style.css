@@ -228,10 +228,15 @@ body {
   color: var(--text-sub);  }
 
 .greeting .profile-description {
-  margin: 18px 0 0;
-  font-size: 12px;
-  line-height: 1.8;
+  margin: 10px 0 0;
+  font-size: 11px;
+  line-height: 1.7;
   color: #7a8578;
+  white-space: nowrap;
+}
+
+.bride-profile .profile-description {
+  font-size: 10.5px;
 }
 
 
@@ -270,34 +275,36 @@ body {
 
 
 
-
-.profile-role {
-  margin: 0 0 10px;
-
+.greeting .profile-role {
+  margin: 0 0 6px;
   font-size: 13px;
+  line-height: 1.5;
   letter-spacing: 2px;
-
   color: #8b9989;
 }
 
-.profile-name {
-  margin: 0 0 16px;
 
+
+.profile-name {
+  margin: 0 0 10px;
   font-size: 21px;
   font-weight: 500;
-
   color: var(--text-main);
 }
 
-.profile-family {
-  margin: 0;
 
-  font-size: 13px;
-  line-height: 1.8;
+
+.greeting .profile-family {
+  margin: 0 0 12px;
+
+  font-size: 11px;
+  line-height: 1.5;
 
   color: var(--text-sub);
   white-space: nowrap;
 }
+
+
 
 .invitation .profile-photo {
   width: 118px;
