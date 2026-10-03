@@ -634,14 +634,14 @@ body {
   color: #333333;}
 
 .bottom-area {
-  padding: 18px 20px 22px;
+  padding: 14px 20px 16px;
   background-color: var(--green-light);
   text-align: center;  
   background-image: var(--paper-texture);
 }
 
 .paper-invitation p {
-  margin: 0 0 14px;
+  margin: 0 0 8px;
   font-size: 11px;
   line-height: 1.8;
   color: var(--text-sub);  }
