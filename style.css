@@ -172,22 +172,21 @@ body {
 
 .hero-text {
   position: absolute;
-  top: 14%;
+  top: 9%;
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;
+  width: 92%;
   text-align: center;
   color: white;
   z-index: 2;
 }
 
 .hero-wedding-title {
-  margin: 0 0 10px;
-
+  margin: 0 0 8px;
   font-family: "Cormorant Garamond", serif;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 500;
-  letter-spacing: 6px;
+  letter-spacing: 5px;
   color: white;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
 }
@@ -197,16 +196,11 @@ body {
   margin: 0;
 
   font-family: "Allura", cursive;
-  font-size: 48px;
+  font-size: 46px;
   font-weight: 400;
+
   color: white;
-
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-
-  opacity: 0;
-  clip-path: inset(0 100% 0 0);
-
-  animation: heroNamesWrite 2.2s ease-out 1.2s forwards;
 }
 
 
