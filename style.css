@@ -284,15 +284,14 @@ body {
   white-space: nowrap;
 }
 
-
-.profile-photo {
+.invitation .profile-photo {
   width: 118px;
-  height: 128px;
+  height: 124px;
 
   margin: 0 auto 14px;
 
   object-fit: cover;
-  object-position: center 32%;
+  object-position: center 30%;
 
   border-radius: 50%;
 
@@ -301,7 +300,6 @@ body {
   box-shadow:
     0 4px 12px rgba(70, 80, 60, 0.10);
 }
-
 
 
 /* =========================
