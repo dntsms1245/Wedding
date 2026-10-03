@@ -895,10 +895,10 @@ body {
 .easter-spot {
   position: absolute;
   /* 성우 얼굴 위치 - 나중에 숫자 조절 */
-    left: 45%;
+    left: 40%;
   top: 55%;
-  width: 10%;
-  height: 9%;
+  width: 8%;
+  height: 7%;
   background: transparent;
   border: none;
   cursor: pointer;
