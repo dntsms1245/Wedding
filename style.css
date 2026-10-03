@@ -344,13 +344,14 @@ body {
   margin: 0;
 
   object-fit: cover;
-  object-position: center;
+  object-position: 68% 25%;
 
   border: none;
   border-radius: 0;
   box-shadow: none;
 
-  transform: translate(-9%, 4%) scale(1.55);
+  transform: scale(1.42);
+  transform-origin: 68% 30%;
 }
 
 
