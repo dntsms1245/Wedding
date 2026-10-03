@@ -265,8 +265,21 @@ body {
   object-fit: cover;
    }
 
+
+
+/* 더보기 버튼 삭제 및 갤러리 기본 9 장에서 기본 15장 으로 표기 */
+
 .gallery-grid .gallery-extra {
-  display: none; }
+  display: block;
+}
+
+.gallery-more-button {
+  display: none;
+}
+
+/* ---------- */
+
+
 
 .gallery-grid .gallery-extra.show {
   display: block; }
