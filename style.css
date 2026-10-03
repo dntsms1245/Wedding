@@ -344,15 +344,14 @@ body {
   margin: 0;
 
   object-fit: cover;
-  object-position: 73% 15%;
+  object-position: center;
 
   border: none;
   border-radius: 0;
   box-shadow: none;
 
-  transform: scale(1.55);
+  transform: translate(-9%, 4%) scale(1.55);
 }
-
 
 
 /* =========================
