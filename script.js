@@ -78,7 +78,11 @@ let isGalleryModal = false;
 
 galleryImages.forEach(function(image) {
   image.addEventListener("click", function() {
-    // 현재 화면에 보이는 사진만 가져오기
+
+
+
+    
+    // 현재 화면에 보이는 사진만 가져오기 //
     visibleGalleryImages = Array.from(galleryImages).filter(function(img) {
       return img.offsetParent !== null;
     });
@@ -89,6 +93,31 @@ galleryImages.forEach(function(image) {
     modal.style.display = "flex";
   });
 });
+
+
+// ========================= //
+// 갤러리 이미지 저장 방지
+// 우클릭 / 길게 누르기 / 드래그 방지
+// ========================= //
+
+document.querySelectorAll(".gallery img, .modal-image").forEach(function(image) {
+
+  image.addEventListener("contextmenu", function(event) {
+    event.preventDefault();
+  });
+
+  image.addEventListener("dragstart", function(event) {
+    event.preventDefault();
+  });
+
+  image.setAttribute("draggable", "false");
+});
+
+
+
+
+
+
 
 
 closeButton.addEventListener("click", function() {
