@@ -43,7 +43,10 @@ kakaoShareButton.addEventListener("click", function() {
 
 const galleryImages = document.querySelectorAll(".gallery img");
 
-const GALLERY_VERSION = "2";
+
+// ★ 갤러리 사진 교체 시 버전 +1 //
+
+const GALLERY_VERSION = "3";
 galleryImages.forEach(function(image) {
   const originalSrc = image.getAttribute("src");
   image.src = originalSrc + "?v=" + GALLERY_VERSION;
