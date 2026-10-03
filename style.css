@@ -953,24 +953,28 @@ body {
 }
 
 
+
+
 /* =========================
    메인 웨딩 타이틀 애니메이션
 ========================= */
 
+/* THE WEDDING OF */
 .hero-wedding-title {
   opacity: 0;
   transform: translateY(8px);
   animation: heroTitleReveal 1.3s ease-out 0.4s forwards;
 }
 
+/* Seongwoo & Wonkyung */
 .hero-wedding-names {
   opacity: 0;
-  transform: translateY(14px);
-  animation: heroNamesReveal 1.6s ease-out 1.1s forwards;
+  clip-path: inset(0 100% 0 0);
+  animation: heroNamesWrite 2.2s ease-out 1.2s forwards;
 }
 
 
-/* THE WEDDING OF */
+/* 첫 번째 줄 등장 */
 @keyframes heroTitleReveal {
   from {
     opacity: 0;
@@ -986,7 +990,7 @@ body {
 }
 
 
-/* Seongwoo & Wonkyung */
+/* 이름이 왼쪽 → 오른쪽으로 나타남 */
 @keyframes heroNamesWrite {
   0% {
     opacity: 0;
@@ -1002,19 +1006,6 @@ body {
     clip-path: inset(0 0 0 0);
   }
 }
-  from {
-    opacity: 0;
-    transform: translateY(14px);
-    filter: blur(3px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-    filter: blur(0);
-  }
-}
-
 
 
 
