@@ -775,6 +775,23 @@ body {
   text-decoration: none;
   font-size: 13px;}
 
+.parking-map-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 10px;
+}
+
+.parking-map-buttons .parking-map-button {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 0;
+  text-align: center;
+}
+
+
+
 .parking-recommend {
   margin-top: 18px !important;
   font-size: 14px;
