@@ -792,6 +792,28 @@ body {
 
 
 
+.parking-map-buttons .parking-map-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 0;
+  text-align: center;
+}
+
+.parking-map-logo {
+  width: 13px !important;
+  height: 13px !important;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+
+
+
 .parking-recommend {
   margin-top: 18px !important;
   font-size: 14px;
