@@ -385,9 +385,9 @@ body {
   color: #222222;  }
 
 .gallery {
-  padding: 60px 20px;
+  padding: 35px 20px 60px;
   background-color: var(--green-light);
-  text-align: center;  
+  text-align: center;
   background-image: var(--paper-texture);
 }
 
