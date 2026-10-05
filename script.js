@@ -346,6 +346,37 @@ if (diffDays > 0) {
 
 
 
+// =========================
+// 웨딩 필름 YouTube 플레이어
+// 자동재생 X / 처음에는 음소거
+// =========================
+
+const youtubeApiScript = document.createElement("script");
+youtubeApiScript.src = "https://www.youtube.com/iframe_api";
+document.head.appendChild(youtubeApiScript);
+let weddingPlayer;
+window.onYouTubeIframeAPIReady = function () {
+  weddingPlayer = new YT.Player("weddingPlayer", {
+    videoId: "j7MpwQ_DW1k",
+    playerVars: {
+      autoplay: 0,
+      controls: 1,
+      playsinline: 1,
+      rel: 0
+    },
+    events: {
+      onReady: function (event) {
+        event.target.mute();
+      }
+    }
+  });
+};
+
+
+
+
+
+
 
 
 
