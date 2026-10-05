@@ -385,7 +385,7 @@ body {
   color: #222222;  }
 
 .gallery {
-  padding: 30px 20px 60px;
+  padding: 30px 20px 20px;
   background-color: var(--green-light);
   text-align: center;
   background-image: var(--paper-texture);
@@ -728,7 +728,7 @@ body {
 ========================= */
 
 .wedding-film {
-  padding: 30px 20px 60px;
+  padding: 30px 20px 30px;
   text-align: center;
   background-color: var(--green-light);
   background-image: var(--paper-texture);
