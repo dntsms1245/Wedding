@@ -742,10 +742,9 @@ body {
 }
 
 .wedding-film h2 {
-  margin: 0 0 28px;
-  font-size: 21px;
-  font-weight: 500;
-  color: var(--text-main);
+  margin: 0 0 30px;
+  font-size: 20px;
+  color: var(--accent-blue);
 }
 
 
