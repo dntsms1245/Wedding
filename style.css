@@ -496,7 +496,7 @@ body {
   color: #555555;  }
 
 .location {
-  padding: 60px 25px;
+  padding: 30px 25px 50px;
   text-align: center;
   background-color: var(--green-medium); 
   background-image: var(--paper-texture);
