@@ -1280,6 +1280,23 @@ body {
 
 
 
-
+/* =========================
+   신랑 / 신부 프로필 카드 순차 등장
+========================= */
+.profile-card {
+  opacity: 0;
+  transform: translateY(20px); }
+.greeting.reveal-active .profile-card {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 1.2s ease,
+    transform 1.2s ease;  }
+/* 신랑 먼저 */
+.greeting.reveal-active .groom-profile {
+  transition-delay: 0.3s;  }
+/* 신부가 조금 뒤 */
+.greeting.reveal-active .bride-profile {
+  transition-delay: 0.7s;  }
 
 
